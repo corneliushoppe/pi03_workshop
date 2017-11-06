@@ -1,0 +1,8 @@
+- hosts: my_pi
+  vars:
+   ntp_server: 0.de.pool.ntp.org 
+  tasks:
+   - name: Zeitserver installation
+     apt:
+	   name: ntpd
+	   state: latest
