@@ -1,0 +1,24 @@
+- hosts: my_pi
+  vars:
+	http_port: 80
+	max_clients: 200
+  tasks:
+  - name: pruefen ob aktuellste Version
+    yum:
+	  name: httpd
+	  status: latest
+  # - name: schreibe Config File
+    # templates:
+	  # src: httpd.j2
+	  # dest: /etc/http.conf
+    # notify:
+	# - restart apache
+   # - name: pruefen ob apache laeuft
+     # service:
+	   # name: http
+	   # state: started
+  # handlers:
+    # - name: restart apache
+	  # service:
+	    # name: httpd
+		# state: restarted
