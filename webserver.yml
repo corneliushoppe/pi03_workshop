@@ -3,22 +3,23 @@
     http_port: 80
     max_clients: 200
   tasks:
-  - name: pruefen ob aktuellste version
+  - name: ensure apache is at the latest version
     apt:
       name: apache2
-      status: latest
-  - name: copy config
-    templates:
+      state: latest
+  - name: write the apache config file
+    template:
       src: apache2.j2
       dest: /etc/apache2.conf
     notify:
     - restart apache
-  - name: pruefen ob apache laeuft
+  - name: ensure apache is running - (and enable it at boot)
     service:
       name: apache2
       state: started
+      enabled: yes
   handlers:
-  - name: restart apache
-    service:
-      name: apache2
-      state: restarted
+    - name: restart apache
+      service:
+        name: apache2
+        state: restarted
