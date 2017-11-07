@@ -4,9 +4,9 @@
 	max_clients: 200
   tasks:
   - name: pruefen ob aktuellste Version
-#    apt:
-#	  name: httpd
-#	  status: latest
+    apt:
+	  name: apache2
+	  status: latest
   # - name: schreibe Config File
     # templates:
 	  # src: httpd.j2
