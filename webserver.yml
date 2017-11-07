@@ -10,7 +10,7 @@
   - name: schreibe Config File
     templates:
       src: apache2.j2
-      dest: /etc/apache2.j2
+      dest: /etc/apache2.conf
     notify:
     - restart apache
   - name: pruefen ob apache laeuft
