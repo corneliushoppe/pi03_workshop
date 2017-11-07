@@ -9,16 +9,16 @@
       status: latest
   # - name: schreibe Config File
     # templates:
-	  # src: httpd.j2
-	  # dest: /etc/http.conf
+      # src: httpd.j2
+      # dest: /etc/http.conf
     # notify:
-	# - restart apache
+    # - restart apache
    # - name: pruefen ob apache laeuft
      # service:
-	   # name: http
-	   # state: started
+       # name: http
+       # state: started
   # handlers:
     # - name: restart apache
-	  # service:
-	    # name: httpd
-		# state: restarted
+      # service:
+        # name: httpd
+        # state: restarted
