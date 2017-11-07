@@ -14,7 +14,7 @@
     notify:
     - restart apache
   - name: pruefen ob apache laeuft
-      service:
+    service:
       name: apache2
       state: started
   handlers:
