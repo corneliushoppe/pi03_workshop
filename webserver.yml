@@ -1,4 +1,4 @@
-- hosts: my_pi
+- hosts: all
   vars:
     http_port: 80
     max_clients: 200
